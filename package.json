@@ -1,0 +1,41 @@
+{
+  "name": "cloudflare-worker-jest-test",
+  "description": "Integration test for Cloudflare Workers with Jest and Wrangler",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler preview --watch",
+    "build": "webpack",
+    "lint": "eslint . --ext .js,.ts",
+    "test": "jest",
+    "test:inspect": "node --inspect=8982 ${INIT_CWD}/node_modules/.bin/jest --runInBand",
+    "format": "prettier --write '**/*.{js,css,json,md}'",
+    "login": "wrangler login",
+    "publish": "wrangler publish"
+  },
+  "engines": {
+    "node": "^14.16.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2",
+    "@cloudflare/wrangler": "^1.19.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "cross-fetch": "^3.1.4",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.0.1",
+    "jest-process-manager": "^0.3.1",
+    "prettier": "^2.3.0",
+    "ts-jest": "^27.0.1",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2",
+    "webpack": "^5.57.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
